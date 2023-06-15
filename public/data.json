@@ -1,0 +1,86 @@
+[
+    {
+      "id": "1",
+      "className": "Tabla",
+      "classImage": "https://img.freepik.com/free-vector/indian-musical-instrument-illustration_96037-403.jpg?w=996&t=st=1686471722~exp=1686472322~hmac=a65ee3b3178459bccbb3646f1ea740ed89ebb0bbe3a21486b9d7afe4b264a4ae",
+      "instructorName": "John Smith",
+      "instructorImg": "https://img.freepik.com/free-photo/front-view-confident-businessman-crossing-hands-sitting-desk-office_140725-94953.jpg?w=740&t=st=1686581932~exp=1686582532~hmac=39f8d8db4c20e810b84e0298cf9f2e1f577d23dfd51190fcd7ace28472180ad7",
+      "instructorEmail": "johnsmith@example.com",
+      "availableSeats": 30,
+      "price": 49.99,
+      "category": "popular",
+      "status": "pending"
+    },
+    {
+      "className": "Violin",
+      "id": "2",
+      "classImage": "https://img.freepik.com/free-vector/watercolor-music-festival-poster-template_23-2148157606.jpg?w=740&t=st=1686476311~exp=1686476911~hmac=b5b7f155ac812e32fd52e43378a875b33d4890fb7886c55d4c0c127e62052bde",
+      "instructorName": "Jane Doe",
+      "instructorImg": "https://img.freepik.com/free-photo/front-view-confident-businessman-crossing-hands-sitting-desk-office_140725-94953.jpg?w=740&t=st=1686581932~exp=1686582532~hmac=39f8d8db4c20e810b84e0298cf9f2e1f577d23dfd51190fcd7ace28472180ad7",
+      "instructorEmail": "janedoe@example.com",
+      "availableSeats": 25,
+      "price": 59.99,
+      "category": "popular",
+      "status": "pending"
+    },
+    {
+      "className": "Guitar",
+      "id": "3",
+      "classImage": "https://img.freepik.com/free-vector/concert-guitar-set_74855-950.jpg?w=740&t=st=1686471758~exp=1686472358~hmac=2e85273f187a479971fcd5f44ac654ac78ca4e8c5dad16092baf44731452a8c2",
+      "instructorName": "David Johnson",
+      "instructorImg": "https://img.freepik.com/free-photo/portrait-confident-bearded-businessman_1098-15546.jpg?w=740&t=st=1686581871~exp=1686582471~hmac=181af797be3940537b7c88a034888a93ccff50c801b40e388b81fbfe69db3397",
+      "instructorEmail": "davidjohnson@example.com",
+      "availableSeats": 20,
+      "price": 39.99,
+      "category": "popular",
+      "status": "pending"
+    },
+    {
+      "className": "Harmonium",
+      "id": "4",
+      "classImage": "https://as2.ftcdn.net/v2/jpg/04/01/79/17/1000_F_401791737_nOF2p9am1CGQa8MhFXkkMSjNUHekEoor.jpg",
+      "instructorName": "Sarah Wilson",
+      "instructorImg": "https://img.freepik.com/premium-photo/man-teacher-wearing-glasses-sitting-school-desk-front-blackboard-classroom-showing-chalkboard-explaining-lesson-happy-positive-smiling_141793-131475.jpg",
+      "instructorEmail": "sarahwilson@example.com",
+      "availableSeats": 15,
+      "price": 79.99,
+      "category": "popular",
+      "status": "pending"
+    },
+    {
+      "className": "Piano",
+      "id": "5",
+      "classImage": "https://img.freepik.com/free-photo/majestic-grand-piano-with-red-lights-generative-ai_188544-7789.jpg?w=360&t=st=1686476682~exp=1686477282~hmac=a7218c65815fd2f0f04781bcc6a2ee4e4e0fc1f79fb63fc3790f3c9f0eb46710",
+      "instructorName": "Michael Thompson",
+      "instructorImg": "https://img.freepik.com/premium-photo/portrait-handsome-businessman-business-environment_53419-5922.jpg?w=740",
+      "instructorEmail": "michaelthompson@example.com",
+      "availableSeats": 10,
+      "price": 69.99,
+      "category": "popular",
+      "status": "pending"
+    },
+    {
+      "className": "Drum set",
+      "id": "6",
+      "classImage": "https://img.freepik.com/premium-vector/set-realistic-drum-kit_362589-11.jpg?w=740",
+      "instructorName": "Emily Davis",
+      "instructorImg": "https://img.freepik.com/premium-photo/portrait-young-handsome-african-businessman-suit-against-view-modern-building-city-outdoors_251136-83045.jpg?w=740",
+      "instructorEmail": "emilydavis@example.com",
+      "availableSeats": 20,
+      "price": 29.99,
+      "category": "popular",
+      "status": "pending"
+    },
+    {
+      "className": "Drum set",
+      "id": "7",
+      "classImage": "https://img.freepik.com/premium-vector/set-realistic-drum-kit_362589-11.jpg?w=740",
+      "instructorName": "Emily Davis",
+      "instructorImg": "https://img.freepik.com/free-photo/portrait-handsome-young-businessman-doing-text-message-mobile-phone_23-2148026644.jpg?w=740&t=st=1686582370~exp=1686582970~hmac=3b10c6384bfc4c0bf9dc518ddf4c71e4eb7866e05b09385cb3701a24b5b2b0e9",
+      "instructorEmail": "emilydavis@example.com",
+      "availableSeats": 20,
+      "price": 29.99,
+      "status": "pending"
+    }
+  ]
+  

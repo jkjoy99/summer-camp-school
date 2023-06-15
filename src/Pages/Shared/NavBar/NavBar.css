@@ -1,0 +1,8 @@
+.icons {
+    color: var(--icons);
+    
+}
+.calor{
+    background-color: var(--nav-menu) ;
+    color: var(--text-color);
+}

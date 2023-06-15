@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ 
+  
+    /* or any other variables/style */
+  
+  .light-theme {
+    --my-color: #fff;
+    --icons: #000;
+    --nav-menu: #fff;
+    --text-color: #000;
+  }
+  .dark-theme {
+    --my-color:#000;
+    --icons: yellow;
+    --nav-menu: #000;
+    --text-color: #fff;
+    
+  }
+
+  body {
+    background-color: var(--my-color);
+  }
