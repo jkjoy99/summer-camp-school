@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 const MyClass = () => {
   const [classes, setClasses] = useState([]);
   const { user } = useContext(AuthContext);
-  const url = `http://localhost:5000/classes/${user?.email}`;
+  const url = `https://summer-camp-school-server-jkjoy99.vercel.app/classes/${user?.email}`;
 
   useEffect(() => {
     fetch(url)

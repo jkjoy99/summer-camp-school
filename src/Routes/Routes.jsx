@@ -33,13 +33,13 @@ export const router = createBrowserRouter([
           path: "instructor",
           element: <Instructor></Instructor>,
           loader: () =>
-            fetch("http://localhost:5000/instructor"),
+            fetch("https://summer-camp-school-server-jkjoy99.vercel.app/instructor"),
         },
         {
           path: "classes",
           element: <Classes></Classes>,
           loader: () =>
-            fetch("http://localhost:5000/approved"),
+            fetch("https://summer-camp-school-server-jkjoy99.vercel.app/approved"),
         },
         {
           path:'/login',
@@ -73,7 +73,7 @@ export const router = createBrowserRouter([
             </AdminRoute>
           ),
           loader: () =>
-            fetch("http://localhost:5000/classes"),
+            fetch("https://summer-camp-school-server-jkjoy99.vercel.app/classes"),
         },
         {
           path: "myclass",

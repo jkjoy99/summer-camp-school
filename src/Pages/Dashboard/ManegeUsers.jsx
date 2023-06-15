@@ -22,7 +22,7 @@ const ManageUsers = () => {
 
   const handleAdmin = (user) => {
     fetch(
-      `http://localhost:5000/users/admin/${user._id}`,
+      `https://summer-camp-school-server-jkjoy99.vercel.app/users/admin/${user._id}`,
       {
         method: "PATCH",
       }
@@ -41,7 +41,7 @@ const ManageUsers = () => {
 
   const handleInstructor = (user) => {
     fetch(
-      `http://localhost:5000/users/instructor/${user._id}`,
+      `https://summer-camp-school-server-jkjoy99.vercel.app/users/instructor/${user._id}`,
       {
         method: "PATCH",
       }

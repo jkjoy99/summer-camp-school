@@ -4,6 +4,7 @@ import { Link, json } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useInstructor from "../../Hooks/useInstructor";
 import useAdmin from "../../Hooks/useAdmin";
+import Swal from "sweetalert2";
 
 const SinglesClasses = ({ singleClass }) => {
   const [isAdmin] = useAdmin();
@@ -28,7 +29,7 @@ const SinglesClasses = ({ singleClass }) => {
       className,
       availableSeat,
       enrolledStudentsCount }
-      fetch("http://localhost:5000/selected",{
+      fetch("https://summer-camp-school-server-jkjoy99.vercel.app/selected",{
         method:"POST",
         headers :{
           'content-type':'application/json'
@@ -37,12 +38,24 @@ const SinglesClasses = ({ singleClass }) => {
       })
       .then(res => res.json())
       .then(data=> {
-        console.log(data);
-        alert('class selected')
+        // console.log(data);
+        Swal.fire({
+          position: 'center-center',
+          icon: 'success',
+          title: 'Class has been Select',
+          showConfirmButton: false,
+          timer: 1500
+      })
       })
    }
    else{
-    alert('plz login then parses')
+    Swal.fire({
+      position: 'center-center',
+      icon: 'error',
+      title: 'plz login then parses',
+      showConfirmButton: false,
+      timer: 1500
+  })
    }
   }
 

@@ -6,7 +6,7 @@ import SinglePopularClasses from "./SinglePopularClasses";
 const PopularClasses = () => {
   const [classes, setClasses] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/popular")
+    fetch("https://summer-camp-school-server-jkjoy99.vercel.app/popular")
       .then((res) => res.json())
       .then((data) => setClasses(data));
   }, []);

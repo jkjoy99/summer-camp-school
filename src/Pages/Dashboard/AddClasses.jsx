@@ -25,7 +25,7 @@ const AddClasses = () => {
       instructorName,
     };
 
-    fetch("http://localhost:5000/classes", {
+    fetch("https://summer-camp-school-server-jkjoy99.vercel.app/classes", {
       method: "POST",
       headers: {
         "content-type": "application/json",

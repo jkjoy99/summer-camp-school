@@ -14,7 +14,7 @@ const ManageClasses = () => {
   const handleApprovedBtn = (id) => {
 
     fetch(
-      `http://localhost:5000/classes?id=${id}&status=approved`,
+      `https://summer-camp-school-server-jkjoy99.vercel.app/classes?id=${id}&status=approved`,
       {
         method: "PATCH",
       }

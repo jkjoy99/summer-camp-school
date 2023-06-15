@@ -14,7 +14,7 @@ const Payment = () => {
       const {id} = useParams();
 
       useEffect(() =>{
-        fetch(`http://localhost:5000/payment/${id}`)
+        fetch(`https://summer-camp-school-server-jkjoy99.vercel.app/payment/${id}`)
         .then(res => res.json())
         .then(data => {
             // console.log(data)

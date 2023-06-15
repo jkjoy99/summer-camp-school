@@ -10,7 +10,7 @@ const SelectedClass = () => {
 
  
   useEffect(() => {
-    fetch(`http://localhost:5000/selected?email=${user?.email}`)
+    fetch(`https://summer-camp-school-server-jkjoy99.vercel.app/selected?email=${user?.email}`)
       .then(res => res.json())
       .then(data => setSelected(data))
   }, [user])
