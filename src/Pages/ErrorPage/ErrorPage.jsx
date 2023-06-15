@@ -5,7 +5,7 @@ const ErrorPage = () => {
     <div>
       <img
         className="w-full h-[700px]"
-        src="https://cdn.dribbble.com/users/2764945/screenshots/5521737/media/7d847cbfa9b3c04087b06df3b67ed58f.gif"
+        src="https://img.freepik.com/free-vector/error-404-concept-landing-page_52683-18756.jpg?w=740&t=st=1686841212~exp=1686841812~hmac=07aa1566bc9fc0e3b111acb9234895f11833eaac307ee5406ee7f9c604591449"
         alt=""
       />
       <Link to="/">
