@@ -2,6 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 const ManageUsers = () => {
   const [axiosSecure] = useAxiosSecure();
@@ -31,7 +32,14 @@ const ManageUsers = () => {
       .then((data) => {
         if (data.modifiedCount) {
           refetch();
-          alert("Successfully updated user role to admin");
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Successfully updated user role to admin',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          
         }
       })
       .catch((error) => {
@@ -50,7 +58,13 @@ const ManageUsers = () => {
       .then((data) => {
         if (data.modifiedCount) {
           refetch();
-          alert("Successfully updated user role to instructor");
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Successfully updated user role to instructor',
+            showConfirmButton: false,
+            timer: 1500
+          })
         }
       })
       .catch((error) => {

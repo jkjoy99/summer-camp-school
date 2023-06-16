@@ -77,7 +77,7 @@ const CheckoutFrom = ({ money, price }) => {
           }
 
           setProcess(false)
-          console.log("paymentIntent",paymentIntent)
+        //   console.log("paymentIntent",paymentIntent)
           if(paymentIntent.status === "succeeded"){
                setTransactionId(paymentIntent.id);
                const payments = { 
@@ -101,7 +101,7 @@ const CheckoutFrom = ({ money, price }) => {
               })
               .then(res => res.json())
               .then(data => {
-                console.log(data)
+                // console.log(data)
                 if(data.insertedId){
                   navigate("/dashboard/selectedclass")
                     Swal.fire({

@@ -7,7 +7,7 @@ import { BsFillMoonFill } from 'react-icons/bs';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import useInstructor from '../../../Hooks/useInstructor';
 import useAdmin from '../../../Hooks/useAdmin';
-import  './NavBar.css'
+import './NavBar.css'
 
 const NavBar = () => {
 
@@ -48,6 +48,7 @@ const NavBar = () => {
         <Link to="/classes">Classes</Link>
       </li>
       
+
       {isAdmin?.admin ? (
         <li>
           <Link to="/dashboard/manageusers">Dashboard</Link>
@@ -56,11 +57,9 @@ const NavBar = () => {
         <li>
           <Link to="/dashboard/addclass">Dashboard</Link>
         </li>
-      ) : (
-        <li>
-          <Link to="/dashboard/enrolledclass">Dashboard</Link>
-        </li>
-      )}
+      ) : <li>
+      <Link to="/dashboard/enrolledclass">Dashboard</Link>
+    </li>}
     </>
   );
   return (
@@ -108,6 +107,7 @@ const NavBar = () => {
         <div className="navbar-end">
           {user ? (
             <>
+
               <div className="avatar online">
                 <div className="w-10 rounded-full">
                   <img src={user?.photoURL} />
@@ -131,10 +131,10 @@ const NavBar = () => {
             </>
           )}
           <div className='block mr-6'>
-                {
-                  theme === 'dark-theme' ? <RiSunFill  className='font-bold text-3xl icons' onClick={() => setThemeItem('dark-theme')} /> : <BsFillMoonFill className='font-bold text-2xl icons' onClick={() => setThemeItem('light-theme')} />
-                }
-              </div>
+            {
+              theme === 'dark-theme' ? <RiSunFill className='font-bold text-3xl icons' onClick={() => setThemeItem('dark-theme')} /> : <BsFillMoonFill className='font-bold text-2xl icons' onClick={() => setThemeItem('light-theme')} />
+            }
+          </div>
         </div>
       </div>
     </div>

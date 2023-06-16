@@ -1,6 +1,4 @@
 import { useContext } from "react";
-
-import { Link, json } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useInstructor from "../../Hooks/useInstructor";
 import useAdmin from "../../Hooks/useAdmin";
@@ -76,16 +74,18 @@ const SinglesClasses = ({ singleClass }) => {
             <p>AvailableSeats: {availableSeat}</p>
             <p>EnrollStudent: {enrolledStudentsCount}</p>
             <div className="card-actions justify-end">
+               
+                
 
-
-              {isAdmin?.admin ? (
+              { 
+              isAdmin?.admin ? (
 
                 <button className="badge badge-outline" disabled >Select</button>
 
               ) : isInstructor?.instructor ? (
-                <button className="badge badge-outline" disabled >Select</button>
+                <button className="badge badge-outline" disabled >Select</button> 
               ) : (
-                <button onClick={() => handleSelect(singleClass)} className="badge badge-outline  btn-outline btn-secondary">Select</button>
+                <button onClick={() => handleSelect(singleClass)} className="badge badge-outline  btn-outline btn-secondary " >Select</button>
               )}
 
             </div>

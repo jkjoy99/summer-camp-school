@@ -3,7 +3,7 @@ const Single = ({ singleInstructor }) => {
 
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 h-[410px] bg-base-100 shadow-xl">
         <figure>
           <img src={photo} alt="Shoes" />
         </figure>

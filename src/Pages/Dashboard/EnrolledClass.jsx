@@ -1,17 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const EnrolledClass = () => {
   const [enroll, setEnroll] = useState([])
+  const { user } = useContext(AuthContext);
+  const url = `https://summer-camp-school-server-iota-gray.vercel.app/payments/${user?.email}`;
 
-    useEffect(() =>{
-       fetch("https://summer-camp-school-server-jkjoy99.vercel.app/payments")
-       .then(res => res.json())
-       .then(data =>{
-            // console.log(data)
+  useEffect(() => {
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
             setEnroll(data)
-       })
-    },[])
+        })
+}, [url])
   return (
     <div className='py-10'>
        <Helmet>
@@ -34,6 +36,7 @@ const EnrolledClass = () => {
                              <th className='p-4 whitespace-nowrap text-[14px]'>CLASS</th>
                              <th className='p-4 whitespace-nowrap text-[14px]'>PRICE</th>
                              <th className='p-4 whitespace-nowrap text-[14px]'>DATE</th>
+                             
                          </tr>
                      </thead>
                      <tbody className='border-[1px]'>

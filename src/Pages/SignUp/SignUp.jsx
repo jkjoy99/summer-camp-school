@@ -25,11 +25,11 @@ const SignUp = () => {
     const { createUser, updateUserProfile,logOut } = useContext(AuthContext);
   
     const onSubmit = (data) => {
-      console.log(data);
+      // console.log(data);
       createUser(data.email, data.password)
         .then((result) => {
           const loggedUser = result.user;
-          console.log(loggedUser);
+          // console.log(loggedUser);
   
           updateUserProfile(data.name, data.photoURL)
             .then(() => {
@@ -55,7 +55,7 @@ const SignUp = () => {
               reset();
               logOut()
                 .then(() => {
-                    navigate('/');
+                    navigate('/login');
                 })
             })
             .catch((error) => console.log(error));
@@ -97,7 +97,7 @@ const SignUp = () => {
               }
             });
   
-          console.log(loggedUser);
+          // console.log(loggedUser);
           navigate(from, { replace: true });
         })
         .catch((error) => {

@@ -9,7 +9,7 @@ const Instructor = () => {
   return (
     <>
       <Helmet>
-        <title>Drowning School | Instructor</title>
+        <title>Music School | Instructor</title>
       </Helmet>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-24">
         {instructor.map((singleInstructor) => (

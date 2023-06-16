@@ -88,13 +88,22 @@ const ManageClasses = () => {
                     <td>{classes.availableSeat}</td>
                     <td>${classes.price}</td>
                     <td>
-                      {
+                      { classes.status === 'approved'?(
+                           <button
+                           onClick={() => handleApprovedBtn(classes._id)}
+                           className="btn btn-xm btn-ghost text-white bg-purple-600 hover:bg-purple-700 btn-shadow border-0 rounded-none" disabled
+                         >
+                           Approve
+                         </button>
+                      ) : (
                         <button
-                          onClick={() => handleApprovedBtn(classes._id)}
-                          className="btn btn-xm btn-ghost text-white bg-purple-600 hover:bg-purple-700 btn-shadow border-0 rounded-none"
-                        >
-                          Approve
-                        </button>
+                           onClick={() => handleApprovedBtn(classes._id)}
+                           className="btn btn-xm btn-ghost text-white bg-purple-600 hover:bg-purple-700 btn-shadow border-0 rounded-none"
+                         >
+                           Approve
+                         </button>
+                      )
+                       
                       }
                       {
                         <button

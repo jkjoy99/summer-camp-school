@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const AddClasses = () => {
@@ -35,13 +37,23 @@ const AddClasses = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("successfully added");
+          Swal.fire({
+            position: 'center-center',
+            icon: 'success',
+            title: 'successfully added',
+            showConfirmButton: false,
+            timer: 1500
+        })
+          
         }
       });
   };
 
   return (
     <div>
+      <Helmet>
+        <title>Music School | Added Class</title>
+      </Helmet>
       <form
         onSubmit={handleAddClass}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
@@ -53,6 +65,7 @@ const AddClasses = () => {
           <input
             type="text"
             name="className"
+            required
             placeholder="Class name"
             className="input input-bordered w-full max-w-xs"
           />
@@ -65,6 +78,7 @@ const AddClasses = () => {
             type="text"
             name="classImage"
             placeholder="Class Image"
+            required
             className="input input-bordered w-full max-w-xs"
           />
         </div>

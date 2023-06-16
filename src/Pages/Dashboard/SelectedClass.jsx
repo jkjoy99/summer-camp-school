@@ -3,6 +3,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import SInglesSelected from "./SInglesSelected";
 
 const SelectedClass = () => {
   const { user } = useContext(AuthContext);
@@ -14,6 +15,7 @@ const SelectedClass = () => {
       .then(res => res.json())
       .then(data => setSelected(data))
   }, [user])
+
 
   return (
     <div>
@@ -37,28 +39,19 @@ const SelectedClass = () => {
               </tr>
             </thead>
             <tbody>
-              {selected?.map((select,index) =>  (
-                <tr key={select._id}>
-                  <td>{index+1}</td>
-                  <th>
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img src={select.classImage} alt="" />
-                      </div>
-                    </div>
-                  </th>
-                  <td>{select.className}</td>
-                  <td>{select.instructorName}</td>
-                  <td>{select.email}</td>
-                  <td>{select.availableSeat}</td>
-                  <td>${select.price}</td>
-                  <td>
-                  
-                  <Link to={`/dashboard/payment/${select._id}`}><button className="badge badge-outline text-center  btn-outline btn-secondary">Enrolled</button></Link>
-                  </td>
-                </tr>
+              {
+                selected.map((select,index)=> <SInglesSelected
+                key={select._id}
+                select={select}
+                index={index}
+                setSelected={setSelected}
+                selected={selected}
+
+                ></SInglesSelected>)
+              }
                 
-              ))}
+                
+              
             </tbody>
           </table>
         </div>

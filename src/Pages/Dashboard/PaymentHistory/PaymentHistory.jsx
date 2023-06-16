@@ -1,18 +1,22 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { AuthContext } from '../../../Providers/AuthProvider';
 
 const PaymentHistory = () => {
     const [payment, setPayment] = useState([])
+    const {user} = useContext(AuthContext)
+    
+    const url = `https://summer-camp-school-server-iota-gray.vercel.app/payments/${user?.email}`;
 
     useEffect(() => {
-        fetch("https://summer-camp-school-server-jkjoy99.vercel.app/payments")
+        fetch(url)
             .then(res => res.json())
             .then(data => {
-                //  console.log(data)
+                //  console.log('data',data)
                 setPayment(data)
             })
-    }, [])
+    }, [url])
 
     return (
         <div className='py-10'>
@@ -36,6 +40,7 @@ const PaymentHistory = () => {
                                     <th className='p-4 whitespace-nowrap text-[14px]'>CLASS</th>
                                     <th className='p-4 whitespace-nowrap text-[14px]'>PRICE</th>
                                     <th className='p-4 whitespace-nowrap text-[14px]'>DATE</th>
+                                    <th className='p-4 whitespace-nowrap text-[14px]'>Payment</th>
                                 </tr>
                             </thead>
                             <tbody className='border-[1px]'>
@@ -50,6 +55,7 @@ const PaymentHistory = () => {
                                         <td className='text-[#737373] p-4 whitespace-nowrap'>{items?.className}</td>
                                         <td className='text-[#737373] p-4 whitespace-nowrap'>${items?.price}</td>
                                         <td className='text-[#737373] p-4 whitespace-nowrap'>{items?.date}</td>
+                                        <td className='text-[#737373] p-4 whitespace-nowrap'><button className="bg-lime-500 text-[#FFF] px-5 py-2 rounded-md font-bold">{items?.payment}</button></td>
                                     </tr>)
                                 }
                             </tbody>
